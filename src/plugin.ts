@@ -27,6 +27,20 @@ class Group {
     };
 
     private _register(server, options) {
+        // route to get all groups
+        server.route({
+            method: 'GET',
+            path: '/groups}',
+            handler: (request, reply) => {
+                this.db.getGroups((err, data) => {
+                    if (err) {
+                        return reply(err).code(400);
+                    }
+                    reply(data);
+                });
+            }
+        });
+
         // Register
         return 'register';
     }
