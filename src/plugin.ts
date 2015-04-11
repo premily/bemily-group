@@ -30,7 +30,7 @@ class Group {
         // route to get all groups
         server.route({
             method: 'GET',
-            path: '/groups}',
+            path: '/groups',
             handler: (request, reply) => {
                 this.db.getGroups((err, data) => {
                     if (err) {
