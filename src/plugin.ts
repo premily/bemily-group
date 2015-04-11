@@ -5,6 +5,8 @@ export interface IRegister {
 
 export default
 class Group {
+    db:any;
+
     constructor() {
         this.register.attributes = {
             name: 'bemily-group',
@@ -14,6 +16,12 @@ class Group {
 
     register:IRegister = (server, options, next) => {
         server.bind(this);
+
+        if (!options.databaseInstance) {
+            throw new Error('options.databaseInstance needs to be defined');
+        }
+        this.db = options.databaseInstance;
+
         this._register(server, options);
         next();
     };
