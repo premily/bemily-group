@@ -41,6 +41,20 @@ class Group {
             }
         });
 
+        // route to get name of specific group
+        server.route({
+            method: 'GET',
+            path: '/groups/{groupid}',
+            handler: (request, reply) => {
+                this.db.getGroupById(request.params.groupid, (err, data) => {
+                    if (err) {
+                        return reply(err).code(400);
+                    }
+                    reply(data);
+                });
+            }
+        });
+
         // Register
         return 'register';
     }
