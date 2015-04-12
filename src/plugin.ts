@@ -71,8 +71,7 @@ class Group {
             handler: (request, reply) => {
                 this.joi.validate(request.payload, this.groupSchema, (err, group:IGroup)=> {
                     if (err) {
-                        var errResponse = this.boom.wrap(err, 400, err.details.message);
-                        reply(errResponse);
+                        return reply(this.boom.wrap(err, 400, err.details.message));
                     } else {
                         this.db.createGroup(group, (err, data) => {
                             if (err) {
