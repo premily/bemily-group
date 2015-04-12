@@ -68,12 +68,18 @@ class Group {
             method: 'POST',
             path: '/groups',
             handler: (request, reply) => {
-                var group:IGroup = request.payload;
-                this.db.createGroup(group, (err, data) => {
+                this.joi.validate(request.payload, this.groupSchema, (err, group:IGroup)=> {
                     if (err) {
-                        return reply(err).code(400);
+                        return reply(err);
+                    } else {
+                        this.db.createGroup(group, (err, data) => {
+                            if (err) {
+                                return reply(err).code(400);
+                            }
+                            reply(data);
+                        });
+
                     }
-                    reply(data);
                 });
             }
         });
@@ -91,7 +97,6 @@ class Group {
                 });
             }
         });
-
 
 
         // Register
