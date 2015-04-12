@@ -75,7 +75,7 @@ class Group {
                     } else {
                         this.db.createGroup(group, (err, data) => {
                             if (err) {
-                                return reply(err).code(400);
+                                return reply(this.boom.wrap(err, 400));
                             }
                             reply(data);
                         });
