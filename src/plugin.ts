@@ -17,7 +17,7 @@ class Group {
     db:any;
     joi:any;
     groupSchema:any;
-
+    boom:any;
 
     constructor() {
         this.register.attributes = {
@@ -25,6 +25,7 @@ class Group {
             version: '0.1.0'
         };
         this.joi = require('joi');
+        this.boom = require('Boom');
         this.initSchema();
     }
 
@@ -70,7 +71,8 @@ class Group {
             handler: (request, reply) => {
                 this.joi.validate(request.payload, this.groupSchema, (err, group:IGroup)=> {
                     if (err) {
-                        return reply(err).code(400);
+                        var errResponse = this.boom.wrap(err, 400, err.details.message);
+                        reply(errResponse);
                     } else {
                         this.db.createGroup(group, (err, data) => {
                             if (err) {
