@@ -3,6 +3,15 @@ export interface IRegister {
     attributes?: any;
 }
 
+/**
+ * structure of group entry in database
+ */
+export interface IGroup {
+    _id: string;
+    name: string;
+    type: string;
+}
+
 export default
 class Group {
     db:any;
