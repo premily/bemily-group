@@ -29,6 +29,11 @@ class Group {
     }
 
     private initSchema():void {
+        this.groupSchema = this.joi.object().keys({
+            _id: this.joi.string().required(),
+            name: this.joi.string().required(),
+            type: this.joi.string().required()
+        });
     }
 
     register:IRegister = (server, options, next) => {
