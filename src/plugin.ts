@@ -70,7 +70,7 @@ class Group {
             handler: (request, reply) => {
                 this.joi.validate(request.payload, this.groupSchema, (err, group:IGroup)=> {
                     if (err) {
-                        return reply(err);
+                        return reply(err).code(400);
                     } else {
                         this.db.createGroup(group, (err, data) => {
                             if (err) {
