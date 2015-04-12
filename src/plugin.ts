@@ -50,6 +50,21 @@ class Group {
             }
         });
 
+        // route to create new group
+        server.route({
+            method: 'POST',
+            path: '/groups',
+            handler: (request, reply) => {
+                var group:IGroup = request.payload;
+                this.db.createGroup(group, (err, data) => {
+                    if (err) {
+                        return reply(err).code(400);
+                    }
+                    reply(data);
+                });
+            }
+        });
+
         // route to get name of specific group
         server.route({
             method: 'GET',
@@ -63,6 +78,8 @@ class Group {
                 });
             }
         });
+
+
 
         // Register
         return 'register';
