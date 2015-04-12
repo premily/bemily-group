@@ -15,12 +15,20 @@ export interface IGroup {
 export default
 class Group {
     db:any;
+    joi:any;
+    groupSchema:any;
+
 
     constructor() {
         this.register.attributes = {
             name: 'bemily-group',
             version: '0.1.0'
         };
+        this.joi = require('joi');
+        this.initSchema();
+    }
+
+    private initSchema():void {
     }
 
     register:IRegister = (server, options, next) => {
