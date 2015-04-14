@@ -101,22 +101,31 @@ class Group {
 
         // route to get name of specific group
         server.route({
-            method: 'GET',
-            path: '/groups/{groupid}',
-            config: {
-                handler: (request, reply) => {
-                    this.db.getGroupById(request.params.groupid, (err, data) => {
-                        if (err) {
-                            return reply(err).code(400);
+                method: 'GET',
+                path: '/groups/{groupid}',
+                config: {
+                    handler: (request, reply) => {
+                        this.db.getGroupById(request.params.groupid, (err, data) => {
+                            if (err) {
+                                return reply(err).code(400);
+                            }
+                            reply(data);
+                        });
+                    },
+                    description: 'Get particular group by ID',
+                    notes: 'group id from "LSF"',
+                    tags: ['api', 'group'],
+                    validate: {
+                        params: {
+                            groupid: this.joi.string()
+                                .required()
+                                .description('GroupId')
                         }
-                        reply(data);
-                    });
-                },
-                description: 'Get particular group by ID',
-                notes: 'group id from "LSF"',
-                tags: ['api', 'group']
+
+                    }
+                }
             }
-        });
+        );
 
 
         // Register
