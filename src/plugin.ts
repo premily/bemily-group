@@ -72,6 +72,7 @@ class Group {
         server.route({
             method: 'POST',
             path: '/groups',
+            config: {
             handler: (request, reply) => {
                 this.joi.validate(request.payload, this.groupSchema, (err, group:IGroup)=> {
                     if (err) {
@@ -86,6 +87,16 @@ class Group {
 
                     }
                 });
+            },
+                description: 'Create new group',
+                tags: ['api', 'group'],
+                validate: {
+                    params: {
+                        username: this.groupSchema
+                            .required()
+                            .description('Group JSON object')
+                    }
+                }
             }
         });
 
