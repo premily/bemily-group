@@ -91,11 +91,10 @@ class Group {
                 description: 'Create new group',
                 tags: ['api', 'group'],
                 validate: {
-                    params: {
-                        username: this.groupSchema
-                            .required()
-                            .description('Group JSON object')
-                    }
+                    payload: this.groupSchema
+                        .required()
+                        .description('Group JSON object')
+
                 }
             }
         });
