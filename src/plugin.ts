@@ -73,21 +73,21 @@ class Group {
             method: 'POST',
             path: '/groups',
             config: {
-            handler: (request, reply) => {
-                this.joi.validate(request.payload, this.groupSchema, (err, group:IGroup)=> {
-                    if (err) {
-                        return reply(this.boom.wrap(err, 400, err.details.message));
-                    } else {
-                        this.db.createGroup(group, (err, data) => {
-                            if (err) {
-                                return reply(this.boom.wrap(err, 400));
-                            }
-                            reply(data);
-                        });
+                handler: (request, reply) => {
+                    this.joi.validate(request.payload, this.groupSchema, (err, group:IGroup)=> {
+                        if (err) {
+                            return reply(this.boom.wrap(err, 400, err.details.message));
+                        } else {
+                            this.db.createGroup(group, (err, data) => {
+                                if (err) {
+                                    return reply(this.boom.wrap(err, 400));
+                                }
+                                reply(data);
+                            });
 
-                    }
-                });
-            },
+                        }
+                    });
+                },
                 description: 'Create new group',
                 tags: ['api', 'group'],
                 validate: {
@@ -104,13 +104,18 @@ class Group {
         server.route({
             method: 'GET',
             path: '/groups/{groupid}',
-            handler: (request, reply) => {
-                this.db.getGroupById(request.params.groupid, (err, data) => {
-                    if (err) {
-                        return reply(err).code(400);
-                    }
-                    reply(data);
-                });
+            config: {
+                handler: (request, reply) => {
+                    this.db.getGroupById(request.params.groupid, (err, data) => {
+                        if (err) {
+                            return reply(err).code(400);
+                        }
+                        reply(data);
+                    });
+                },
+                description: 'Get particular group by ID',
+                notes: 'group id from "LSF"',
+                tags: ['api', 'group']
             }
         });
 
