@@ -54,13 +54,17 @@ class Group {
         server.route({
             method: 'GET',
             path: '/groups',
-            handler: (request, reply) => {
-                this.db.getGroups((err, data) => {
-                    if (err) {
-                        return reply(err).code(400);
-                    }
-                    reply(data);
-                });
+            config: {
+                handler: (request, reply) => {
+                    this.db.getGroups((err, data) => {
+                        if (err) {
+                            return reply(err).code(400);
+                        }
+                        reply(data);
+                    });
+                },
+                description: 'Get all groups',
+                tags: ['api', 'group']
             }
         });
 
