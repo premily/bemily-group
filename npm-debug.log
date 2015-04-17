@@ -1,0 +1,131 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/timoweiss/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+12 verbose folder .
+13 info prepublish bemily-group@0.1.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/timoweiss/.npm/1f1177db-tar.lock
+16 silly lockFile 459e2bdb-5722-0-26562604936771095-tmp-tgz tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+17 verbose lock tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz /Users/timoweiss/.npm/459e2bdb-5722-0-26562604936771095-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 459e2bdb-5722-0-26562604936771095-tmp-tgz tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+21 silly lockFile 459e2bdb-5722-0-26562604936771095-tmp-tgz tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+22 verbose tar unpack /var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+23 silly lockFile 2ab3205e-s-npm-bemily-group-0-1-1-package tar:///Users/timoweiss/.npm/bemily-group/0.1.1/package
+24 verbose lock tar:///Users/timoweiss/.npm/bemily-group/0.1.1/package /Users/timoweiss/.npm/2ab3205e-s-npm-bemily-group-0-1-1-package.lock
+25 silly lockFile 459e2bdb-5722-0-26562604936771095-tmp-tgz tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+26 verbose lock tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz /Users/timoweiss/.npm/459e2bdb-5722-0-26562604936771095-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry gulpfile.js
+32 silly gunzTarPerm extractEntry index.js
+33 silly gunzTarPerm extractEntry Makefile
+34 silly gunzTarPerm extractEntry src/main.ts
+35 silly gunzTarPerm extractEntry src/plugin.ts
+36 silly gunzTarPerm extractEntry test/test.js
+37 silly gunzTarPerm extractEntry tsd.json
+38 silly gunzTarPerm extractEntry typings/bluebird/bluebird.d.ts
+39 silly gunzTarPerm extractEntry typings/hapi/hapi.d.ts
+40 silly gunzTarPerm extractEntry typings/node/node.d.ts
+41 silly lockFile 2ab3205e-s-npm-bemily-group-0-1-1-package tar:///Users/timoweiss/.npm/bemily-group/0.1.1/package
+42 silly lockFile 2ab3205e-s-npm-bemily-group-0-1-1-package tar:///Users/timoweiss/.npm/bemily-group/0.1.1/package
+43 silly lockFile 459e2bdb-5722-0-26562604936771095-tmp-tgz tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+44 silly lockFile 459e2bdb-5722-0-26562604936771095-tmp-tgz tar:///var/folders/v2/x6wm5w_s1f7gsc4fm58l5whc0000gn/T/npm-61039-E5OKUeqI/1429267345722-0.26562604936771095/tmp.tgz
+45 silly lockFile 3a52ce78- .
+46 silly lockFile 3a52ce78- .
+47 silly publish { name: 'bemily-group',
+47 silly publish   version: '0.1.1',
+47 silly publish   description: 'Superpower',
+47 silly publish   main: 'index.js',
+47 silly publish   scripts:
+47 silly publish    { test: 'make test-cov',
+47 silly publish      postinstall: 'tsd reinstall && gulp ts' },
+47 silly publish   repository:
+47 silly publish    { type: 'git',
+47 silly publish      url: 'git://github.com/premily/bemily-group.git' },
+47 silly publish   peerDependencies: { hapi: '>=8.x.x' },
+47 silly publish   devDependencies: { code: '1.x.x', hapi: '8.x.x', lab: '5.x.x' },
+47 silly publish   dependencies:
+47 silly publish    { boom: '^2.7.0',
+47 silly publish      joi: '^6.1.1',
+47 silly publish      typescript: '^1.5.0-alpha',
+47 silly publish      gulp: '^3.8.11',
+47 silly publish      'gulp-jshint': '^1.9.4',
+47 silly publish      'gulp-nodemon': '^2.0.2',
+47 silly publish      'gulp-notify': '^2.2.0',
+47 silly publish      'gulp-sourcemaps': '^1.5.1',
+47 silly publish      'gulp-tsc': '^0.9.3',
+47 silly publish      'gulp-typescript': '^2.5.0',
+47 silly publish      merge2: '^0.3.1',
+47 silly publish      'node-notifier': '^4.1.2' },
+47 silly publish   readme: '# hapi-typescript-plugin\n\nThis is a very basic template to write [HapiJs-Plugins](http://hapijs.com/api#plugins) with TypeScript.\n\nIt has a gulptask included to compile the source to JavaScript. This task is also referenced in the package.json as postinstall script.\n\n## Tests\n\nTests can be run with `npm test` or `make test`, `make test-cov` and `test-cov-html`.\nNote:  `npm test` points to `make test-cov`. This is inspired from many hapi plugins.',
+47 silly publish   readmeFilename: 'README.md',
+47 silly publish   bugs: { url: 'https://github.com/premily/bemily-group/issues' },
+47 silly publish   homepage: 'https://github.com/premily/bemily-group',
+47 silly publish   _id: 'bemily-group@0.1.1',
+47 silly publish   _shasum: 'fbbd188e0c541bfb2310b2d7b44d136cca53f76c',
+47 silly publish   _from: '.' }
+48 verbose url raw bemily-group
+49 verbose url resolving [ 'https://registry.npmjs.org/', './bemily-group' ]
+50 verbose url resolved https://registry.npmjs.org/bemily-group
+51 info trying registry request attempt 1 at 12:42:25
+52 http PUT https://registry.npmjs.org/bemily-group
+53 http 404 https://registry.npmjs.org/bemily-group
+54 verbose headers { date: 'Fri, 17 Apr 2015 10:42:27 GMT',
+54 verbose headers   server: 'Apache',
+54 verbose headers   'content-type': 'application/json',
+54 verbose headers   'cache-control': 'max-age=0',
+54 verbose headers   'content-length': '21',
+54 verbose headers   'accept-ranges': 'bytes',
+54 verbose headers   via: '1.1 varnish',
+54 verbose headers   'x-served-by': 'cache-fra1237-FRA',
+54 verbose headers   'x-cache': 'MISS',
+54 verbose headers   'x-cache-hits': '0',
+54 verbose headers   'x-timer': 'S1429267346.496944,VS0,VE1165',
+54 verbose headers   'keep-alive': 'timeout=10, max=50',
+54 verbose headers   connection: 'Keep-Alive' }
+55 error publish Failed PUT 404
+56 error Error: Not found : bemily-group
+56 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+56 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+56 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:123:22)
+56 error     at Request.EventEmitter.emit (events.js:98:17)
+56 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:893:14)
+56 error     at Request.EventEmitter.emit (events.js:117:20)
+56 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:844:12)
+56 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+56 error     at _stream_readable.js:919:16
+56 error     at process._tickCallback (node.js:419:13)
+57 error If you need help, you may report this *entire* log,
+57 error including the npm and node versions, at:
+57 error     <http://github.com/npm/npm/issues>
+58 error System Darwin 14.1.0
+59 error command "node" "/usr/local/bin/npm" "publish"
+60 error cwd /Volumes/SSD1/Development/premily/bemily-group
+61 error node -v v0.10.28
+62 error npm -v 1.4.9
+63 verbose exit [ 1, true ]

@@ -1,6 +1,6 @@
 {
   "name": "bemily-group",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Superpower",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,14 @@
   },
   "devDependencies": {
     "code": "1.x.x",
-    "gulp": "^3.8.11",
     "hapi": "8.x.x",
-    "lab": "5.x.x",
+    "lab": "5.x.x"
+  },
+  "dependencies": {
+    "boom": "^2.7.0",
+    "joi": "^6.1.1",
+    "typescript": "^1.5.0-alpha",
+    "gulp": "^3.8.11",
     "gulp-jshint": "^1.9.4",
     "gulp-nodemon": "^2.0.2",
     "gulp-notify": "^2.2.0",
@@ -27,10 +32,5 @@
     "gulp-typescript": "^2.5.0",
     "merge2": "^0.3.1",
     "node-notifier": "^4.1.2"
-  },
-  "dependencies": {
-    "boom": "^2.7.0",
-    "joi": "^6.1.1",
-    "typescript": "^1.5.0-alpha"
   }
 }
